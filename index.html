@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LeonelDev14 - Desarrollador</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #1e90ff 0%, #43e97b 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            padding: 2rem 3rem 0 3rem;
+        }
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+        }
+        .btn {
+            background: #1e90ff;
+            color: #fff;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-weight: 600;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        }
+        .btn:hover {
+            background: #43e97b;
+            color: #222;
+        }
+        .main-content {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 3rem;
+            margin-left: 3rem;
+        }
+        .descripcion, .section-content {
+            background: rgba(255,255,255,0.95);
+            padding: 2.5rem 3.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+            max-width: 600px;
+        }
+        .descripcion h1, .section-content h2 {
+            margin-bottom: 1.2rem;
+            color: #1e90ff;
+            font-size: 2.7rem;
+        }
+        .descripcion p, .section-content p {
+            color: #222;
+            font-size: 1.25rem;
+            margin-bottom: 0;
+        }
+        .dynamic-section {
+            display: none;
+            margin: 2rem 3rem 0 3rem;
+            background: rgba(255,255,255,0.97);
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+            padding: 2rem 2.5rem;
+            max-width: 100%;
+            animation: fadeIn 0.5s;
+            overflow-x: auto;
+        }
+        .dynamic-section h2 {
+            color: #1e90ff;
+            margin-top: 0;
+        }
+        .proyectos-list {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            list-style: none;
+            padding: 0;
+            margin: 1.2rem 0 0 0;
+            overflow-x: auto;
+        }
+        .proyectos-list li {
+            min-width: 260px;
+            max-width: 320px;
+            background: #f3fafd;
+            border-radius: 8px;
+            padding: 1rem 1.2rem;
+            box-shadow: 0 1px 4px rgba(30,144,255,0.07);
+            flex: 0 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .proyectos-list li strong {
+            color: #1e90ff;
+        }
+        @media (max-width: 1000px) {
+            .proyectos-list {
+                gap: 1rem;
+            }
+            .proyectos-list li {
+                min-width: 220px;
+                max-width: 260px;
+            }
+        }
+        @media (max-width: 800px) {
+            .main-content {
+                margin: 2rem 1rem 0 1rem;
+            }
+            .descripcion, .section-content {
+                padding: 1.5rem 1rem;
+                max-width: 100%;
+            }
+            .header {
+                padding: 1rem 1rem 0 1rem;
+            }
+            .dynamic-section {
+                margin: 2rem 1rem 0 1rem;
+                padding: 1.2rem 0.8rem;
+                max-width: 100%;
+            }
+            .proyectos-list {
+                gap: 0.5rem;
+            }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="btn-group">
+            <button class="btn" id="verProyectosBtn">Ver Proyectos</button>
+            <button class="btn" id="unirseBtn">Unirse</button>
+            <button class="btn" id="contactoBtn">Contacto</button>
+        </div>
+    </div>
+    <div class="main-content" id="mainContent">
+        <div class="descripcion" id="descripcion">
+            <h1>Leonel Morales</h1>
+            <p>
+                ¡Bienvenido! Soy Leonel Morales, un desarrollador pequeño apasionado por la tecnología y la programación. Esta es mi página web oficial donde podrás ver mis proyectos y conocimientos.
+            </p>
+        </div>
+    </div>
+    <section class="dynamic-section" id="proyectosSection">
+        <h2>Mis Proyectos</h2>
+        <ul class="proyectos-list">
+            <li>
+                <strong>Pagina Web de Juegos</strong><br>
+                Sitio web de juegos basicos. <br>
+                <a href="https://leonelgamingcompany.github.io" target="_blank">Ver proyecto</a>
+            </li>
+            <li>
+                <strong>Grabador de Pantalla</strong><br>
+                Pagina Web Simple para grabar la pantalla.<br>
+                <a href="https://grabarpantallahd.github.io" target="_blank">Ver proyecto</a>
+            </li>
+        </ul>
+    </section>
+    <section class="dynamic-section" id="unirseSection">
+        <div class="section-content">
+            <h2>Unirse</h2>
+            <p>¿Te gustaría colaborar conmigo? Contactame.</p>
+            <!-- Aquí puedes agregar un formulario real si lo deseas -->
+        </div>
+    </section>
+    <section class="dynamic-section" id="contactoSection">
+        <div class="section-content">
+            <h2>Contacto</h2>
+            <p>Puedes contactarme por correo electrónico: LeonelDev14@gmail.com</p>
+            <!-- Aquí puedes agregar un formulario de contacto real si lo deseas -->
+        </div>
+    </section>
+    <script>
+        const verProyectosBtn = document.getElementById('verProyectosBtn');
+        const unirseBtn = document.getElementById('unirseBtn');
+        const contactoBtn = document.getElementById('contactoBtn');
+        const proyectosSection = document.getElementById('proyectosSection');
+        const unirseSection = document.getElementById('unirseSection');
+        const contactoSection = document.getElementById('contactoSection');
+
+        function hideAllSections() {
+            proyectosSection.style.display = 'none';
+            unirseSection.style.display = 'none';
+            contactoSection.style.display = 'none';
+        }
+
+        function showSection(section) {
+            hideAllSections();
+            section.style.display = 'block';
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        verProyectosBtn.addEventListener('click', () => {
+            showSection(proyectosSection);
+        });
+
+        unirseBtn.addEventListener('click', () => {
+            showSection(unirseSection);
+        });
+
+        contactoBtn.addEventListener('click', () => {
+            showSection(contactoSection);
+        });
+    </script>
+</body>
+</html>
